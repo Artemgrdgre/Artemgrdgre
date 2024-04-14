@@ -28,7 +28,7 @@ class RectCard():
 
 class LableCard(RectCard):
     def set_text(self, text):
-        self.lable = pygame.font.SysFont('Arial', 28).render(text, True, (0,0,0))
+        self.lable = pygame.font.SysFont('Times New Roman', 28).render(text, True, (0,0,0))
 
     def draw_text(self, shift_x, shift_y):
         self.fill()
@@ -68,5 +68,11 @@ while True:
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
             run = False
+        if e.type == pygame.MOUSEBUTTONDOWN:
+            x, y = e.pos
+
+
+
+            
     clock.tick(60)
     pygame.display.update()
