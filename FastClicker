@@ -26,6 +26,9 @@ class RectCard():
     def outline(self):
         pygame.draw.rect(main_window, self.frame_color, self.rect, self.thickness)
 
+    def collidepoint(self, x, y):
+        return self.rect.collidepoint(x, y)
+
 class LableCard(RectCard):
     def set_text(self, text):
         self.lable = pygame.font.SysFont('Times New Roman', 28).render(text, True, (0,0,0))
