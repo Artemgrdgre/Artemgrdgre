@@ -49,6 +49,7 @@ for i in range(4):
     x+=120
 
 wait = 0
+run = True
 while True:
     if wait == 0:
         main_window.fill(back)
@@ -63,5 +64,9 @@ while True:
     
     else:
         wait -=1
+
+    for e in pygame.event.get():
+        if e.type == pygame.QUIT:
+            run = False
     clock.tick(60)
     pygame.display.update()
